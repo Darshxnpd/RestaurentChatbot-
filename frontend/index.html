@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atliq Fast Food</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #ff6f61;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 10px 20px;
+            margin: 0 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 16px;
+        }
+        header nav a:hover {
+            background-color: #e55e4e;
+            border-radius: 4px;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        section {
+            margin: 40px 0;
+        }
+        #home img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        #menu h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .grid-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #location, #contactus {
+            text-align: center;
+        }
+        #location h2, #contactus h2 {
+            font-size: 2rem;
+            color: #333;
+        }
+        #contactus p {
+            font-size: 1rem;
+            color: #666;
+        }
+        #track-order {
+            text-align: center;
+            background-color: #fffcf9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #track-order h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        #track-order input {
+            padding: 10px;
+            font-size: 1rem;
+            width: 250px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            margin-right: 10px;
+            box-sizing: border-box;
+        }
+        #track-order button {
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        #track-order button:hover {
+            background-color: #e55e4e;
+        }
+        iframe.chat-bot {
+            margin: 40px auto;
+            display: block;
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="#home">HOME</a> |
+                <a href="#menu">MENU</a> |
+                <a href="#location">LOCATION</a> |
+                <a href="#aboutus">ABOUT US</a> |
+                <a href="#contactus">CONTACT US</a>
+            </nav>
+        </header>
+
+        <!-- Home Section -->
+        <section id="home">
+            <img src="banner.jpg" alt="Aditi Fast Food Banner">
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div class="grid-container">
+                <img src="menu1.jpg" alt="Menu item 1">
+                <img src="menu2.jpg" alt="Menu item 2">
+                <img src="menu3.jpg" alt="Menu item 3">
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location">
+            <h2>Location</h2>
+            <p>38 Patli Gali, Mumbai</p>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contactus">
+            <h2>Contact Us</h2>
+            <p>Got questions? Want to place an order? Call us at +91791234567 or email us at info@atliqfastfood.com</p>
+        </section>
+
+        <!-- Order Tracking Section -->
+        <section id="track-order">
+            <h2>Track Your Order</h2>
+            <input type="number" id="order-id" placeholder="Enter Order ID">
+            <button onclick="trackOrder()">Track Order</button>
+            <p id="order-status"></p>
+        </section>
+
+        <!-- Dialogflow Chatbot -->
+        <iframe class="chat-bot" width="350" height="430" allow="microphone;"
+            src="https://console.dialogflow.com/api-client/demo/embedded/3e06eda8-e4ad-4344-ad51-22e9ecd3da1a"></iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
